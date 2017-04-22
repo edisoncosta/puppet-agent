@@ -7,10 +7,8 @@ apt-get update
 
 apt-get -y install puppet-agent
 
-PATH=/opt/puppetlabs/bin:/usr/local/bin:$PATH
-      
-echo "PATH=$PATH" >>/etc/bash.bashrc
-echo "export PATH" >>/etc/bash.bashrc
-export PATH
+if ! echo $PATH | grep -q /opt/puppetlabs/bin ; then
+  export PATH=$PATH:/opt/puppetlabs/bin
+fi
       
 mkdir -p /etc/facter/facts.d
