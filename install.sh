@@ -1,9 +1,9 @@
 #!/bin/bash
 
 cd /tmp
-wget https://apt.puppetlabs.com/puppet5-release-jessie.deb
+wget --inet4-only https://apt.puppetlabs.com/puppet5-release-jessie.deb
 sudo dpkg -i puppet5-release-jessie.deb
-sudo apt-get update
+sudo apt-get -o Acquire::ForceIPv4=true update
 
 apt-get -y install puppet-agent
 
