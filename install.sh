@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /tmp
-wget http://apt.puppetlabs.com/puppetlabs-release-pc1-jessie.deb
-dpkg -i puppetlabs-release-pc1-jessie.deb
+wget http://apt.puppetlabs.com/puppetlabs-release-pc1-$(lsb_release -sc).deb
+dpkg -i puppetlabs-release-pc1-$(lsb_release -sc).deb
 apt-get update
 
 apt-get -y install puppet-agent
