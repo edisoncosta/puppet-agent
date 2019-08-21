@@ -1,8 +1,8 @@
 #!/bin/bash
 
 cd /tmp
-wget http://apt.puppetlabs.com/puppet-release-$(lsb_release -sc).deb
-dpkg -i puppet-release-$(lsb_release -sc).deb
+wget http://apt.puppetlabs.com/puppet5-release-$(lsb_release -sc).deb
+dpkg -i puppet5-release-$(lsb_release -sc).deb
 apt-get update
 
 apt-get -y install puppet-agent
