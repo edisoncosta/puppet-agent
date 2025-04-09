@@ -3,6 +3,7 @@
 cd /tmp
 wget http://apt.puppetlabs.com/puppet6-release-$(lsb_release -sc).deb
 dpkg -i puppet6-release-$(lsb_release -sc).deb
+wget -O - https://apt.puppet.com/pubkey.gpg | sudo apt-key add -
 apt-get update
 
 apt-get -y install puppet-agent
