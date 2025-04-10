@@ -1,6 +1,7 @@
 #!/bin/bash
 
 cd /tmp
+apt install gnupg -y
 wget -O - https://apt.puppet.com/pubkey.gpg | sudo apt-key add -
 wget http://apt.puppetlabs.com/puppet6-release-$(lsb_release -sc).deb
 dpkg -i puppet6-release-$(lsb_release -sc).deb
